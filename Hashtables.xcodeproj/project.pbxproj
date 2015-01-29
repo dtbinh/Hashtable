@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79545F421A7A096A005A9973 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 79545F411A7A096A005A9973 /* Makefile */; };
+		795A72BF1A79B05C00EF5685 /* readfile.c in Sources */ = {isa = PBXBuildFile; fileRef = 795A72BD1A79B05C00EF5685 /* readfile.c */; };
 		798A13941A774E48001225A9 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 798A13931A774E48001225A9 /* main.c */; };
+		798A139D1A775DCF001225A9 /* tweets.c in Sources */ = {isa = PBXBuildFile; fileRef = 798A139B1A775DCF001225A9 /* tweets.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +26,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		79545F411A7A096A005A9973 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		795A72BD1A79B05C00EF5685 /* readfile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = readfile.c; sourceTree = "<group>"; };
+		795A72BE1A79B05C00EF5685 /* readfile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = readfile.h; sourceTree = "<group>"; };
 		798A13901A774E48001225A9 /* Hashtables */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Hashtables; sourceTree = BUILT_PRODUCTS_DIR; };
 		798A13931A774E48001225A9 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		798A139B1A775DCF001225A9 /* tweets.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tweets.c; sourceTree = "<group>"; };
+		798A139C1A775DCF001225A9 /* tweets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tweets.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +65,12 @@
 		798A13921A774E48001225A9 /* Hashtables */ = {
 			isa = PBXGroup;
 			children = (
+				798A139B1A775DCF001225A9 /* tweets.c */,
+				798A139C1A775DCF001225A9 /* tweets.h */,
 				798A13931A774E48001225A9 /* main.c */,
+				79545F411A7A096A005A9973 /* Makefile */,
+				795A72BD1A79B05C00EF5685 /* readfile.c */,
+				795A72BE1A79B05C00EF5685 /* readfile.h */,
 			);
 			path = Hashtables;
 			sourceTree = "<group>";
@@ -118,6 +131,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				795A72BF1A79B05C00EF5685 /* readfile.c in Sources */,
+				798A139D1A775DCF001225A9 /* tweets.c in Sources */,
+				79545F421A7A096A005A9973 /* Makefile in Sources */,
 				798A13941A774E48001225A9 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,6 +248,7 @@
 				798A13991A774E48001225A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
