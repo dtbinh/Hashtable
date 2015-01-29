@@ -46,7 +46,6 @@ int put(char* string, hashtable* h)
     int bucket_num = hashcode % CAPACITY;
     node* head = h->list[bucket_num];
     //printf("%d %s \n", hashcode, string);
-    
     //check if it exists
     node *existingNode = getNode(string, h);
     if(existingNode != NULL){
@@ -54,13 +53,14 @@ int put(char* string, hashtable* h)
     }else{
         node *new = (node*) malloc(sizeof(node)); //allocating space
         if(new == NULL) return 0;
-        new->value = malloc(sizeof(string));
+        new->value = malloc(strlen(string) + 1);
         if(new->value == NULL) return 0;
         strcpy(new->value, string);
         new->occurences = 1;
         new->next = head;
         h->list[bucket_num] = new; //head = new doesn’t work because it’s a stack, you need to change the global variable
     }
+    
     return 1;
 }
 
@@ -77,11 +77,13 @@ node* getNode(char* string, hashtable* h){
     int index = hashcode % CAPACITY;
     // 3. look through the linked list     // starting with the head
     node *n = h->list[index];
-    
+
     while (n != NULL) {
-        if(n->value == NULL) return NULL;
+        //if(n->value == NULL) return NULL;
+        
         if (strcmp(n->value, string) == 0) {
             return n;
+            break;
         } else{
             n = n->next;
         }

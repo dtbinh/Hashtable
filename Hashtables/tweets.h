@@ -12,7 +12,7 @@
 #include <stdio.h>
 
 // the initial capacity (number of buckets)
-#define CAPACITY 1000
+#define CAPACITY 100
 
 typedef struct Node node;
 struct Node {
